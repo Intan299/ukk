@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN ADMIN</title>
+    <title>LOGIN PETUGAS</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
-    <main class="container">
-        <section class="card">
-            <header> ISI DIBAWAH INI UNTUK CS</header>
-            <form action="proses_login.php" method="post">
+
+    <header>LOGIN PETUGAS</header>
+
+    <form action="proses_login.php" method="post">
         <table class="form-table">
             <p>
-                <label for="username">username</label>
-                <input type="text" name="username" placeholder=" isi username">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Isi username" required>
             </p>
 
             <p>
-                <label for="password">password</label>
-                <input type="text" name="password" placeholder="isi password">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Isi password" required>
             </p>
+
+            <input type="hidden" name="akses" value="petugas">
 
             <p>
                 <button type="submit">LOGIN</button>
             </p>
-</table>
+        </table>
     </form>
-        </section>
-    </main>
+
 </body>
 </html>

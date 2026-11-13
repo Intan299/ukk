@@ -8,10 +8,8 @@
 </head>
 <body>
     
-    <main class="container">
-        <section class="card">
             <header> ISI DIBAWAH INI UNTUK ADMIN</header>
-            <form action="proses_login.php" method="post">
+            <form action="proses_loginadmin.php" method="post">
         <table class="form-table">
             <p>
                 <label for="username">username</label>
@@ -20,7 +18,7 @@
 
             <p>
                 <label for="password">password</label>
-                <input type="text" name="password" placeholder=" isi password">
+                <input type="password" name="password" placeholder="isi password">
             </p>
 
             <p>

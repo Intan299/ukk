@@ -1,24 +1,31 @@
 <?php
 include "koneksi.php";
 
-if(isset($_POST['username']) && isset($_POST['password'])){
-    $username =$_POST['username'];
-    $password =$_POST['password'];
+if (isset($_POST['username']) && isset($_POST['password'])) {
 
-    $sql = "select * from login where username='$username' AND password='$password'";
-    $query = mysqli_query($koneksi,$sql);
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $akses = $_POST['akses'];
 
-    $jumlah=mysqli_num_rows(result: $query);
-    if($jumlah>0){
-    header(header:'Location: login.php');
+    $sql = "select * from login where username='$username'and password='$password' and akses='$akses'";
+
+    $query = mysqli_query($koneksi, $sql);
+
+    if (mysqli_num_rows($query) > 0) {
+
+        if ($akses == "admin") {
+            header("Location: backend.php");
+            exit;
+        } else {
+            header("Location: backend_petugas.php");
+            exit;
+        }
+
+    } else {
+        echo "Username atau password salah!";
     }
-    else{
-        header(header: 'Location: proses_login.php?error=login');
-    }
-}
-else{
-    echo 'username and password salah';
-}
 
+} else {
+    echo "Data login belum lengkap!";
+}
 ?>
-

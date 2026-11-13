@@ -22,7 +22,7 @@
                 <ul>
 
                     <li class="li-button">
-                        <a href="login.php" class="a-button">[REGISTER]</a>
+                        <a href="register.php" class="a-button">[REGISTER]</a>
                     </li>
 
                          <li class="li-button">

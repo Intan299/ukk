@@ -1,9 +1,10 @@
 <?php
 include 'koneksi.php';
 
-$user_id = $_GET['id'];
-mysqli_query($koneksi, "delete from customer where user_id='$user_id'");
+$barang_id = $_GET['id'];
+mysqli_query($koneksi, "delete from barang where barang_id='$barang_id'");
 
-header("location:index.php");
+header("location:barang.php");
+exit;
 
 ?>
